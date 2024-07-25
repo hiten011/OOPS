@@ -9,7 +9,7 @@ bool is_fanarray(int array[], int n){
 
     int mid = n / 2; // finding the middle value
 
-    for (int i = 0; i < (mid - 1); i++){
+    for (int i = 0; i < mid ; i++){
 
         // ascending (left to right)
         if (array[i] > array[i + 1]){
