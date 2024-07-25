@@ -8,7 +8,7 @@ int count_evens(int number){
     
     int count = 0;
 
-    for (int i = 0; i < number; i++){ // counting the even numbers
+    for (int i = 1; i <= number; i++){ // counting the even numbers
         if (i % 2 == 0){
             count++;
         }
