@@ -17,12 +17,11 @@ bool is_fanarray(int array[], int n){
         }
 
         // descending (right to left)
-        if (array[n] < array[n - 1]){
+        if (array[n - i - 1 ] > array[n - i - 2]){
             return false;
         }
     }
 
     return true;
-
 
 }
