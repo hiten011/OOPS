@@ -6,11 +6,11 @@ double array_mean(int array[], int n){
         return 0.0;
     }
     
-    int total = 0;
+    double total = 0;
 
     for (int i = 0; i < n; i++){ // adding the numbers in array
         total += array[i];
     }
 
-    return double(total / n);
+    return (double)total  / n;
 }

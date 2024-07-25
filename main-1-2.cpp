@@ -1,13 +1,13 @@
 #include <iostream>
 
-extern int array_sum(int array[], int n);
+extern double array_mean(int array[], int n);
 
 int main(){
 
     int number[] = {1, 2, 3, 4, 5};
    
 
-    int sums = array_sum(number ,5);
+    double sums = array_mean(number ,0);
 
     std::cout << "Sum: " << sums << std::endl;
 }
