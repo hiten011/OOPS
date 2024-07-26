@@ -20,6 +20,11 @@ bool is_fanarray(int array[], int n){
         if (array[n - i - 1 ] > array[n - i - 2]){
             return false;
         }
+         
+        // comparing the corresponding numbers
+        if (array[n - i -1] != array[i]){ 
+            return false;
+        }
     }
 
     return true;
