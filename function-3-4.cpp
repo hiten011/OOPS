@@ -5,19 +5,19 @@ void print_pass_fail(char grade){
 
     switch (grade){
         case 'A':
-            cout << "PASS" << endl;
+            cout << "Pass" << endl;
             break;
         case 'B':
-            cout << "PASS" << endl;
+            cout << "Pass" << endl;
             break;
         case 'C':
-            cout << "PASS" << endl;
+            cout << "Pass" << endl;
             break;
         case 'D':
-            cout << "FAIL" << endl;
+            cout << "Fail" << endl;
             break;
         case 'E':
-            cout << "FAIL" << endl;
+            cout << "Fail" << endl;
             break;
     }
 
