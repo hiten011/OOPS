@@ -1,6 +1,4 @@
 #include <iostream>
-#include <stdlib.h>
-#include <cmath>
 
 int median_array(int array[], int n){
 

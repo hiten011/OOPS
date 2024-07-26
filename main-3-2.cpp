@@ -4,10 +4,10 @@ extern int median_array(int array[], int n);
 
 int main(){
 
-    int number[] = {1, 2, 12, 10, 0};
+    int number[] = {3,5,2,1};
    
 
-    int sums = median_array(number, 5);
+    int sums = median_array(number, 4);
 
     std::cout << "Sum: " << sums << std::endl;
 }
