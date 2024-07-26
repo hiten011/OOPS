@@ -22,8 +22,6 @@ double weighted_average(int array[], int n){
 
         weighted_avg += (double) (array[i] * (count / n));
 
-        std:: cout << weighted_avg << std:: endl;
-        std:: cout << count << std:: endl;
 
     }
 
