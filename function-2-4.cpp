@@ -9,7 +9,7 @@ int array_min(int integers[], int length){
     // Initialising minimum
     int minimum = integers[0];
     
-    for(int i = 0; i < length; i++){
+    for(int i = 1; i < length; i++){
         if(integers[i] < minimum){
             minimum = integers[i];
         }
@@ -27,7 +27,7 @@ int array_max(int integers[], int length){
     // Defining maximum
     int maximum = integers[0];
     
-    for(int i = 0; i < length; i++){
+    for(int i = 1; i < length; i++){
         if(integers[i] > maximum){
             maximum = integers[i];
         }

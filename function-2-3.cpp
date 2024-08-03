@@ -10,7 +10,7 @@ bool is_palindrome(int array[], int length) {
     int mid = length / 2;
     int index = length - 1;
 
-    for (int i = 0; i < mid + 1; i++){
+    for (int i = 0; i < mid; i++){
 
         if (array[i] != array[index]){
             return false;
