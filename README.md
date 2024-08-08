@@ -1,1 +1,0 @@
-# OOPS (Practicals & Workshops)
