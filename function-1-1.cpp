@@ -10,7 +10,6 @@ int *readNumbers(){
     for (int i = 0; i < 10; i++){
 
         // taking input
-        cout << "Enter the number " << i + 1 << ": ";
         cin >> array[i];
         
     }
