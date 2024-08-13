@@ -25,29 +25,10 @@ void printNumbers(int *numbers,int length){
     }
 }
 
-int find_small(int * array, int len){
-
-    int small = array[0];
-    int sec_small = array[1];
-
-    for (int i = 1; i < len; i++){
-        
-        if (array[i] <= small){
-
-            sec_small = small;
-            small = array[i];
-        }
-        else if(array[i] < sec_small){
-            sec_small = array[i];
-        }
-    }
-
-    return sec_small;
-}
 
 int secondSmallestSum(int *numbers,int length){
 
-    // creating the array to store all the possible subsets
+    // creating the variables
     int sum;
     int small = numbers[0];
     int sec_small = numbers[1];
