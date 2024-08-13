@@ -47,13 +47,10 @@ int find_small(int * array, int len){
 
 int secondSmallestSum(int *numbers,int length){
 
-    // calculating length of possible sub sets
-    int len = 0.5 * length * (length + 1);
-
     // creating the array to store all the possible subsets
-    int array[len];
     int sum;
-    int index = 0;
+    int small = numbers[0];
+    int sec_small = numbers[1];
 
     // for loops to create and store all the possible subsets
 
@@ -66,11 +63,21 @@ int secondSmallestSum(int *numbers,int length){
             // storing the sum in array
             sum += numbers[j];
 
-            // putting the sum in array
-            array[index] = sum;
-            index++; //appending the index
+            // skiping the the first most loop
+            if (i == 0 && j == 0){
+                continue;
+            }
+
+            // finding the second smallest
+            if (sum <= small){
+                sec_small = small;
+                small = sum;
+            }
+            else if(sum < sec_small){
+                sec_small = sum;
+            }
         }
     }
 
-    return find_small(array, len);
+    return sec_small;
 }
