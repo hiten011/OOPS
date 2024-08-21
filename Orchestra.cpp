@@ -11,6 +11,7 @@ Orchestra::Orchestra() {
 }
 
 Orchestra::Orchestra(int size) {
+    this->num_musicians = 0;
     this->max_musicians = size;
     this->musicians = new Musician[size];
 }
@@ -33,7 +34,7 @@ Musician* Orchestra::get_members() { return musicians; }
 
 bool Orchestra::add_musician(Musician new_musician) { 
     
-    if (this->num_musicians != this->max_musicians-1){
+    if (this->num_musicians != this->max_musicians){
         this->musicians[this->num_musicians] = new_musician;
         this->num_musicians++;
         return true;
