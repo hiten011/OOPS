@@ -1,6 +1,6 @@
 #include "Orchestra.h"
 #include "Musician.h"
-#include <string.h>
+#include <string>
 
 using namespace std;
 
@@ -33,7 +33,7 @@ Musician* Orchestra::get_members() { return musicians; }
 
 bool Orchestra::add_musician(Musician new_musician) { 
     
-    if (num_musicians != max_musicians){
+    if (this->num_musicians != max_musicians){
         this->musicians[num_musicians] = new_musician;
         num_musicians++;
         return true;
