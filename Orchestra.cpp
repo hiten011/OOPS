@@ -12,7 +12,7 @@ Orchestra::Orchestra() {
 
 Orchestra::Orchestra(int size) {
     max_musicians = size-1;
-    musicians = new Musician[size];
+    musicians = new Musician[size-1];
 }
 
 int Orchestra::get_current_number_of_members() { return num_musicians; }
