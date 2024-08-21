@@ -2,6 +2,7 @@
 #define ORCHESTRA_H
 
 #include <iostream>
+#include <string>
 #include "Musician.h"
 
 
