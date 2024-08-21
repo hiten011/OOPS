@@ -5,14 +5,14 @@
 using namespace std;
 
 Orchestra::Orchestra() {
-    num_musicians = 0;
-    max_musicians = 0;
-    musicians = nullptr;
+    this->num_musicians = 0;
+    this->max_musicians = 0;
+    this->musicians = nullptr;
 }
 
 Orchestra::Orchestra(int size) {
-    max_musicians = size-1;
-    musicians = new Musician[size-1];
+    this->max_musicians = size;
+    this->musicians = new Musician[size];
 }
 
 int Orchestra::get_current_number_of_members() { return num_musicians; }
@@ -33,7 +33,7 @@ Musician* Orchestra::get_members() { return musicians; }
 
 bool Orchestra::add_musician(Musician new_musician) { 
     
-    if (this->num_musicians != this->max_musicians){
+    if (this->num_musicians != this->max_musicians-1){
         this->musicians[this->num_musicians] = new_musician;
         this->num_musicians++;
         return true;
