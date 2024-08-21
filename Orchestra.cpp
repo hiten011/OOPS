@@ -33,8 +33,8 @@ Musician* Orchestra::get_members() { return musicians; }
 
 bool Orchestra::add_musician(Musician new_musician) { 
     
-    if (this->num_musicians != max_musicians){
-        this->musicians[num_musicians] = new_musician;
+    if (this->num_musicians != this->max_musicians){
+        this->musicians[this->num_musicians] = new_musician;
         num_musicians++;
         return true;
     }
