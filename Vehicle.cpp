@@ -1,13 +1,14 @@
-#include"Vehicle.h"
-#include<ctime>
-    Vehicle::Vehicle(): ID(0){}
-    Vehicle::Vehicle(int ID): ID(ID){}
-    int Vehicle::get_ID(){return ID;}
-    int Vehicle::getParkingDuration()
-    {
-        time_t currentTime;
-        currentTime = time(0);
-        return (int)difftime(currentTime, timeOfEntry);
-    }
-    void Vehicle::set_ID(int id){ID=id;}
-  time_t Vehicle::get_timeOfEntry(){return timeOfEntry;}
+#include "Vehicle.h"
+
+Vehicle::Vehicle(): ID(0){
+    this->timeOfEntry = time(nullptr);
+}
+
+Vehicle::Vehicle(int ID): ID(ID) {}
+
+int Vehicle::get_ID() { return this->ID; }
+
+std::time_t Vehicle::getDuration() {
+    time_t current_time = time(nullptr);
+    return (int) difftime(current_time, this->timeOfEntry);
+ }

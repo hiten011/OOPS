@@ -1,44 +1,45 @@
-#include<iostream>
-#include <ctime>
-#include"Vehicle.h"
-#include"Car.h"
-#include"Bus.h"
-#include"Motorbike.h"
+#include "Vehicle.h"
+#include "Motorbike.h"
+#include "Bus.h"
+#include "Car.h"
+#include <ctype.h>
+
 using namespace std;
-int main()
-{
-    int c,b,m=0;
-    cout<<"Enter the number of Cars \n";
-    cin>>c;
-    cout<<"Enter the number of Buses \n";
-    cin>>b;
-    cout<<"Enter the number of motorbikes \n";
-    cin>>m;
-    Car * cars[c];
-    Bus * buses[b];
-    Motorbike * motor[m];
-     for (int i = 0; i < c; i++) {
-        cars[i] = new Car(i + 1);
+
+int main(){
+    // taking input from user
+    int total_vehicle = 0;
+    cout << "Number of vehicle: ";
+    cin >> total_vehicle;
+    
+    // creating array to store the vehicles pointer
+    Vehicle ** vehicle_array = new Vehicle*[total_vehicle];
+
+    string type = "None";
+
+    // looping and asking for type of Vehicle
+    for (int i = 0; i < total_vehicle; i++){
+
+        // asking user the vehicle type
+        cout << "Type: ";
+        cin >> type;
+
+        if (type == "Car"){
+            vehicle_array[i] = new Car[1];
+        }
+        else if (type == "Bus"){
+            vehicle_array[i] = new Bus[1];
+        }
+        else if (type == "Motorbike"){
+            vehicle_array[i] = new Motorbike[1];
+        }
+        else{
+            vehicle_array[i] = nullptr;
+        }
     }
 
-    for (int j = 0; j < b; j++) {
-        buses[j] = new Bus(j + 1);
+    for (int j = 0; j < total_vehicle; j++){
+        cout << vehicle_array[j]->getDuration() << endl;
     }
 
-    for (int k = 0; k < m; k++) {
-        motor[k] = new Motorbike(k + 1);
-    }
-    for (int i = 0; i < c; i++)
-    {
-        cout<<"Car "<<cars[i]->get_ID()<<" : "<<cars[i]->getParkingDuration()<<" seconds \n";
-    }
-    for (int j = 0; j < b; j++)
-    {
-        cout<<"Bus "<<buses[j]->get_ID()<<" : "<<buses[j]->getParkingDuration()<<" seconds \n";
-    }
-       for (int k = 0; k < m; k++)
-    {
-        cout<<"Motorbike "<<motor[k]->get_ID()<<" : "<<motor[k]->getParkingDuration()<<" seconds \n";
-    }
-    return 0;
 }
