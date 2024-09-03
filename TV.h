@@ -9,8 +9,8 @@ class TV: public Appliance{
 
     public:
         TV();
-        TV(int powerrating, double screenSize);
-        
+        TV(int powerRating, double screenSize);
+
         void setScreenSize(double screenSize);
         double getScreenSize();
 
