@@ -1,0 +1,20 @@
+#ifndef TV_H
+#define TV_H
+
+#include "Appliance.h"
+
+class TV: public Appliance{
+    protected:
+        double screenSize;
+
+    public:
+        TV();
+        TV(int powerrating, double screenSize);
+        
+        void setScreenSize(double screenSize);
+        double getScreenSize();
+
+        double getPowerConsumption();
+};
+
+#endif
