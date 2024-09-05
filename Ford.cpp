@@ -18,4 +18,16 @@ void Ford::refuel(int litres) {
     }
 }
 
-void Ford::drive(int kms) {}
+void Ford::drive(int kms) {
+    for (int i = 0; i < kms; i++){
+        
+        if (litresOfFuel <= 0.1){
+            break;
+        }
+
+        litresOfFuel = litresOfFuel - 0.2;
+
+        emissions = emissions + 234;
+
+    }
+}
