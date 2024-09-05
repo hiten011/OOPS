@@ -2,17 +2,30 @@
 #define HOUSE_H
 
 #include "Appliance.h"
+#include "Fridge.h"
+#include "TV.h"
 
-class House{
-    protected:
-        Appliance ** Appliances;
+class House {
+
+    private:
         int numAppliances;
+        int current_count;
 
+        Appliance** appliances;
+    
     public:
         House();
         House(int numAppliances);
+        ~House();
 
-        double getPowerConsumption();
+        bool addAppliance(Appliance* appliance);
+
+        double getTotalPowerConsumption();
+
+        
+
 };
+
+
 
 #endif
