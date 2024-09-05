@@ -1,6 +1,6 @@
 #include "Tesla.h"
 
-Tesla::Tesla() {};
+Tesla::Tesla(): model(0), Car(0), batteryPercentage(0.0) {};
 Tesla::Tesla(char model, int price): model(model), Car(price), batteryPercentage(0.0) {}
 
 int Tesla::get_model() { return this->model; }
