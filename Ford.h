@@ -14,15 +14,15 @@ class Ford: public Car{
 
     public:
         Ford();
-        Ford(char model, int price);
+        Ford(int badgeNumber, int price);
 
-        int get_model();
-        int set_model(char model);
+        int get_badgeNumber();
+        int set_badgeNumber(char model);
 
-        int get_batteryPercentage();
-        int set_batteryPercentage(int batteryPercentage);
+        float get_litresOfFuel();
+        float set_litresOfFuel(float litresOfFuel);
 
-        void chargeBattery(int mins);
+        void refuel(int litres);
         void drive(int kms);
 
 
