@@ -23,23 +23,24 @@ void Tesla::chargeBattery(int mins) {
 
     for (int i = 0; i < mins; i++){
 
-        if (batteryPercentage == 100){
+        set_batteryPercentage(batteryPercentage + 0.5);
+
+        if (batteryPercentage >= 100){
             break;
         }
 
-        batteryPercentage += 0.5;
     }
 }
 
 void Tesla::drive(int kms) {
     for (int i = 0; i < kms; i++){
 
-        if (batteryPercentage < 1){
+        if (batteryPercentage <= 0){
             break;
         } 
 
         if ((i+1) % 5 == 0){
-            batteryPercentage -= 1;
+            set_batteryPercentage(batteryPercentage - 1);
         }
 
         emissions += 74;
