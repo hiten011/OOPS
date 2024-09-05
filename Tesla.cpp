@@ -1,7 +1,7 @@
 #include "Tesla.h"
 
-Tesla::Tesla(): model(0), Car(0), batteryPercentage(0.0) {};
-Tesla::Tesla(char model, int price): model(model), Car(price), batteryPercentage(0.0) {}
+Tesla::Tesla(): model(0), Car(0), batteryPercentage(100) {};
+Tesla::Tesla(char model, int price): model(model), Car(price), batteryPercentage(100) {}
 
 int Tesla::get_model() { return this->model; }
 int Tesla::set_model(char model) { this->model = model; }
@@ -23,12 +23,11 @@ void Tesla::chargeBattery(int mins) {
 
     for (int i = 0; i < mins; i++){
 
-        set_batteryPercentage(batteryPercentage + 0.5);
-
         if (batteryPercentage >= 100){
             break;
         }
 
+        set_batteryPercentage((batteryPercentage + 0.5));
     }
 }
 
@@ -40,7 +39,7 @@ void Tesla::drive(int kms) {
         } 
 
         if ((i+1) % 5 == 0){
-            set_batteryPercentage(batteryPercentage - 1);
+            batteryPercentage -= 1;
         }
 
         emissions += 74;
