@@ -38,9 +38,7 @@ void Tesla::drive(int kms) {
             break;
         } 
 
-        if ((i+1) % 5 == 0){
-            set_batteryPercentage((batteryPercentage - 1));
-        }
+        set_batteryPercentage((batteryPercentage - 0.2));
 
         emissions += 74;
     }
