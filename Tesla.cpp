@@ -38,7 +38,7 @@ void Tesla::drive(int kms) {
             break;
         } 
 
-        if (i % 5 == 0){
+        if ((i+1) % 5 == 0){
             batteryPercentage -= 1;
         }
 
