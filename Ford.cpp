@@ -13,9 +13,13 @@ float Ford::get_litresOfFuel() { return litresOfFuel; }
 float Ford::set_litresOfFuel(float litresOfFuel) { this->litresOfFuel = litresOfFuel; }
 
 void Ford::refuel(int litres) {
-    if (litresOfFuel + litres <= 60){
+    if (litresOfFuel + litres >= 60){
+        litresOfFuel = 60;
+    }
+    else{
         litresOfFuel += litres;
     }
+   
 }
 
 void Ford::drive(int kms) {
