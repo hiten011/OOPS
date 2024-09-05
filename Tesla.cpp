@@ -1,13 +1,13 @@
 #include "Tesla.h"
 
-Tesla::Tesla(): model(0), Car(0), batteryPercentage(100) {};
-Tesla::Tesla(char model, int price): model(model), Car(price), batteryPercentage(100) {}
+Tesla::Tesla(): model(0), Car(0), batteryPercentage(100.0) {};
+Tesla::Tesla(char model, int price): model(model), Car(price), batteryPercentage(100.0) {}
 
 int Tesla::get_model() { return this->model; }
 int Tesla::set_model(char model) { this->model = model; }
 
 int Tesla::get_batteryPercentage() { return this->batteryPercentage; }
-int Tesla::set_batteryPercentage(int batteryPercentage) { 
+int Tesla::set_batteryPercentage(float batteryPercentage) { 
 
     if (batteryPercentage < 0){
         this->batteryPercentage = 0;
