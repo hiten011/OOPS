@@ -11,5 +11,5 @@ int Car::get_emissions() { return emissions; }
 int Car::set_emissions(int emissions) { this->emissions = emissions; }
 
 void Car::drive(int kms) {
-    this->emissions = emissions * kms;
+    this->emissions = 20 * kms;
 };
